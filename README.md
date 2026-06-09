@@ -23,7 +23,7 @@ Perangkat ini terintegrasi dengan sensor RFID, sensor suhu, layar LCD, dan melak
 3. **Sensor Suhu**: DHT11
 4. **Display**: LCD 16x2 + I2C Backpack
 5. **Notifikasi Audio**: Active Buzzer (5V/3.3V)
-6. **Lainnya**: Kabel Jumper, Breadboard, dan Adaptor Daya Listrik (Jangan gunakan Baterai 18650 secara langsung tanpa modul regulator yang mumpuni untuk mencegah *Brownout WiFi*).
+6. **Lainnya**: Kabel Jumper, Breadboard, dan Adaptor Daya Listrik.
 
 ---
 
@@ -55,7 +55,7 @@ Pastikan Anda sudah menginstal *libraries* berikut di Arduino IDE Anda (melalui 
 - `Firebase ESP32 Client` (oleh Mobizt)
 
 ### 2. Penyesuaian Kredensial
-Buka file `ThermaAuth_Final_v1.ino` lalu ubah baris berikut sesuai dengan jaringan dan database Anda:
+Buka file `thermaauth.cpp` lalu ubah baris berikut sesuai dengan jaringan dan database Anda:
 
 ```cpp
 #define WIFI_SSID "NAMA_WIFI_ANDA"
@@ -73,7 +73,7 @@ Buka file `ThermaAuth_Final_v1.ino` lalu ubah baris berikut sesuai dengan jaring
 ### 3. Mendaftarkan Kartu Master
 Jika ingin mendaftarkan UID Kartu RFID lain, temukan variabel ini di kode:
 ```cpp
-const String MASTER_CARD_UID = "8131105D"; 
+const String MASTER_CARD_UID = "9170F95D"; 
 ```
 Ganti string di atas dengan kode HEX kartu atau gantungan kunci (*keyfob*) RFID Anda sendiri (tanpa spasi).
 
